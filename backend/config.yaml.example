@@ -1,0 +1,51 @@
+app:
+  name: BlogSite
+  base_url: http://localhost:8080
+  env: development
+
+server:
+  port: 8080
+  mode: debug
+
+database:
+  host: localhost
+  port: 5432
+  user: postgres
+  password: postgres
+  name: blogsite
+  ssl_mode: disable
+  auto_migrate: true
+  timezone: Asia/Shanghai
+
+jwt:
+  secret: change-me-in-production
+  issuer: blogsite
+  expire_hours: 72
+
+admin:
+  username: admin
+  # Either provide a plaintext password (hashed at startup) ...
+  password: admin123
+  # ... or a pre-computed bcrypt hash (takes precedence).
+  password_hash: ""
+
+storage:
+  driver: local # local | s3
+  local:
+    dir: ./uploads
+    base_url: /uploads
+  s3:
+    endpoint: ""
+    region: ""
+    bucket: ""
+    access_key_id: ""
+    secret_access_key: ""
+    use_ssl: true
+    public_base_url: ""
+
+comment:
+  auto_approve: false
+  rate_limit_per_min: 5
+  blacklist:
+    - viagra
+    - http://spam

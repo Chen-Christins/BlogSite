@@ -1,0 +1,10 @@
+DROP TRIGGER IF EXISTS trg_posts_search_vector ON posts;
+DROP FUNCTION IF EXISTS posts_search_vector_update();
+DROP TABLE IF EXISTS page_views;
+DROP TABLE IF EXISTS media;
+DROP TABLE IF EXISTS comments;
+DROP TABLE IF EXISTS post_tags;
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS tags;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS settings;

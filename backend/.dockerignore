@@ -1,0 +1,6 @@
+.git
+uploads
+*.log
+config.yaml
+tmp
+vendor
